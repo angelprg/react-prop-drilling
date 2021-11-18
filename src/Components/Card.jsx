@@ -1,12 +1,18 @@
 import React from "react";
 import Counter from "./Counter";
-import Like from './Like';
+import Like from "./Like";
 
 const Card = ({ title, qty, like, onLikeClick }) => {
-
+  const cardStyle = {
+    border: "1px solid gray",
+    margin: "5px",
+    padding: "15px",
+    minWidth: "300px",
+    width: "300px",
+  };
   return (
-    <div style={{ border: "1px solid gray", margin: "5px" }}>
-      <Like like={like} onLikeClick={onLikeClick}/>
+    <div style={cardStyle}>
+      <Like like={like} onLikeClick={onLikeClick} />
       <h2>{title}</h2>
       <Counter qty={qty} />
     </div>

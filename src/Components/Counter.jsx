@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const Counter = ({qty}) => {
+const Counter = ({ qty }) => {
+  const styleContainer = {
+    margin: "5px",
+    fontSize: "20px",
+  };
+  const styleQty = {
+    marginLeft: "15px",
+    marginRight: "15px",
+  };
   return (
-    <div>
-      <h4>{qty}</h4>
+    <div style={styleContainer}>
+      <button> - </button>
+      <span style={styleQty}>{qty}</span>
+      <button> + </button>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;
